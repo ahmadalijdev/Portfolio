@@ -361,7 +361,7 @@ img {
   font-weight: 600;
 }
 
-/* Shared section headings */
+/* Shared Section Headings */
 
 .section-heading {
   display: grid;
@@ -417,7 +417,6 @@ img {
 .about-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
 }
 
 .detail-item {
@@ -557,50 +556,25 @@ img {
 
 .project-image {
   position: relative;
-  min-height: 390px;
+  height: 390px;
   overflow: hidden;
 }
 
 .coffee-project {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #eee8df;
+  display: block;
+  background: #1c0f0b;
 }
 
-.project-image-top {
-  position: absolute;
-  top: 20px;
-  right: 22px;
-  left: 22px;
-  display: flex;
-  justify-content: space-between;
-  color: rgba(30, 25, 20, 0.5);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
+.coffee-project img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 
-.project-image-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #302820;
-}
-
-.project-image-title span {
-  margin-bottom: -8px;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.project-image-title strong {
-  font-size: clamp(60px, 7vw, 95px);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -5px;
+.coffee-project:hover img {
+  transform: scale(1.06);
 }
 
 .project-content {
@@ -865,7 +839,7 @@ img {
   color: var(--accent);
 }
 
-/* Reveal animation */
+/* Reveal Animation */
 
 .reveal {
   opacity: 0;
@@ -1042,7 +1016,12 @@ img {
   }
 
   .project-image {
+    height: 290px;
     min-height: 290px;
+  }
+
+  .coffee-project img {
+    height: 290px;
   }
 
   .project-content {
